@@ -1,7 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Prototype for Acey Duecey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+    <link rel="stylesheet" href="..//acey.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<header style="background-color: lightblue;">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:transparent;color:black;">
+        <ul class="navbar-nav mr-auto" style="font-weight:bold;color:black">
+                <li class="nav-item" >
+                    <a class="nav-link" href="#Home" style="color:black">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Introduction" style="color:black">Introduction</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:black">Basic Facts</a>
+                </li>    
+                <li class="nav-item dropdown" style="background-color: transparent">
+                    <a class="nav-link dropdown-toggle" style="color:rgb(4, 0, 255)" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Strategy</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01" style="background-color: transparent">
+                    <a class="dropdown-item" href="#">Solo</a>
+                    <a class="dropdown-item" href="#">Two players</a>
+                    <a class="dropdown-item" href="#">Group players</a>
+                    </div>
+                </li>
+        </ul>   
+    </nav>
+
+</header>
+<main role="main" >
+    <section id="Home" style="box-sizing:border-box;background-color: lightblue;height:100vh;width:100vw"> 
+        <div class="container" style="padding-top:10em;">
+            <h1><strong>Acey-deucey</strong></h1>
+            <p class="lead">also known as In-Between, Sheets or Maverick</p>
+            <p style="font-style:italic"> A simple card game that involves betting between the cards.</p>
+            <div style="float: right;">
+            <img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Fgambling-4%2F128%2FGambling_playing_cards-512.png&f=1" alt="Poker cards">
+            </div>
+        </div>
+    </section>
+    <section id="Introduction" style="box-sizing:border-box;background-color: lightcoral;height:100vh;width:100vw; min-height: 100%; min-width: 100%"> 
+            <div  class="container" style="padding-top:5em;">
+                <div class="row">
+                    <div class="col">
+                    <h1><strong>Introduction</strong></h1>
+                    <h2>Rules: </h2>
+                    <p class="lead">
+                        Before the action, each player must add their ante into the pot. Two cards are then dealt face-up to one player.                     
+                    </p>
+                    <p>
+                        That player then bets from nothing to the amount that is in the pot at the time whether or not the third card will numerically fall in between the first two. 
+                    </p>
+                    <p>
+                        If the third card falls in between the two other cards, the bettor takes the amount he bet out of the pot; if the third card falls outside of the two other cards, the bettor must add what he bet to the pot; and if the third card matches the numerical value of one of the other two cards, the bettor must add to the pot double what he bet. If two cards of the same value come up, e.g. 2,2 the bettor picks if the next card will be higher or lower and bets. If the next card is the same as the last two, i.e. a 2, the bettor must triple his/her bet.                    
+                    </p>
+                    </div>
+                </div>
+                <div class="row justify-content-center" style="margin-top:5em">
+                    <div class="col text-center">
+                        <img src="http://www.freestockphotos.biz/pictures/15/15512/Illustration+of+a+King+of+Diamonds+playing+card.png" alt="King of Diamond" height="320px" width="240px" align="middle">
+                    </div>
+                    <div class="col text-center">
+                        <img src="http://www.freestockphotos.biz/pictures/15/15504/Illustration+of+an+Eight+of+Hearts+playing+card.png" alt="King of Diamond" height="320px" width="240px" align="middle">
+                        <p style="margin-top:1em">
+                            Player get 8 hearts between King and Ace.
+                            <br> 
+                            Player wins the bets. 
+                        </p>
+                    </div>
+                    <div class="col text-center">
+                        <img src="http://www.freestockphotos.biz/pictures/15/15511/Illustration+of+an+Ace+of+Hearts+playing+card.png" alt="King of Diamond" height="320px" width="240px" align="middle">
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="Variations" style="box-sizing:border-box;background-color: rgb(128, 223, 240);height:100vh;width:100vw"> 
+        <div  class="container" style="padding-top:5em;">
+            <h1><strong>Variations</strong></h1>
+            <p class="lead">
+                    A variation is to split the cards if two end cards are the same value. This requires the bettor to ante in for two hands and the dealer would draw one more card under each of the end cards. After this, the same rules apply.
+
+                    Some new rules that increase payouts and betting:
+                    
+                        Blind Pot - Bet the pot before your 2 outside cards are placed. In the case of a win, you win the pot. If you are outside of your cards you lose half the pot. If you post you have to pay the full amount of the pot.
+                        "AutoPot" - Any A-2 played as your outside cards automatically make the player bet the full amount of the pot.
+                        Post Bet - You can bet that your inside card will match one of your outside cards. In the case of this you win the full pot and in addition each player pays an equal percentage to match the pot. Therefore, the player that post would win 2x the pot. If the player bets the post and misses he owes half the amount of the pot to the pot.
+                        Satan 6s - Any player that gets 6-6-6 as their cards must pay 6x the amount of the pot to the pot.                    
+            </p>
+        </div>
+</section>
+</main>
 </body>
 </html>
