@@ -9,3 +9,21 @@
     height: 300px;
     width: 300px;
 }
+
+section{
+    box-sizing:border-box;
+    background-color: lightblue;
+    height:100%;
+    width:100%; 
+    min-height: 100vh; 
+    min-width: 100vw;
+}
+
+section#Introduction{
+    background-color:lightgreen;    
+}
+
+section#Variations{
+    background-color:lightpink;
+}
+
