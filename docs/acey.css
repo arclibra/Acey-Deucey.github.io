@@ -17,13 +17,42 @@ section{
     width:100%; 
     min-height: 100vh; 
     min-width: 100vw;
+    padding: 1em;
 }
 
-section#Introduction{
+section div{
+    padding-top: 5em;
+}
+
+section:nth-child(odd){
     background-color:lightgreen;    
 }
 
-section#Variations{
+section:nth-child(even){
     background-color:lightpink;
+}
+
+section:nth-child(3n){
+    background-color: lightsalmon;
+}
+
+span{
+    font-weight: bold;
+}
+
+span.blue{
+    color: blue;
+}
+
+span.green{
+    color: green;
+}
+
+blockquote
+{
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: 6px solid rgb(121, 125, 126);
+    background-color: rgba(211, 211, 211, 0.418);
 }
 

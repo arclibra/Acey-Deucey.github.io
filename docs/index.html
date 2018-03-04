@@ -23,11 +23,13 @@
                     <a class="nav-link" href="#Introduction" style="color:black">Introduction</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color:black">Basic Facts</a>
+                    <a class="nav-link" href="#Variations" style="color:black">Variations</a>
                 </li>    
                 <li class="nav-item dropdown" style="background-color: transparent">
                     <a class="nav-link dropdown-toggle" style="color:rgb(4, 0, 255)" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Strategy</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01" style="background-color: transparent">
+                    <a class="dropdown-item" href="#GeneralStrategy">General Strategy</a>
+                    <a class="dropdown-item" href="#BasicCalculator">Basic Calculator</a>
                     <a class="dropdown-item" href="#">Solo</a>
                     <a class="dropdown-item" href="#">Two players</a>
                     <a class="dropdown-item" href="#">Group players</a>
@@ -97,20 +99,140 @@
             </p>
             <ul class="ul-acey">
                 <li>               
-                        Blind Pot - Bet the pot before your 2 outside cards are placed. In the case of a win, you win the pot. If you are outside of your cards you lose half the pot. If you post you have to pay the full amount of the pot.
+                    <h2>Blind Pot</h2>
+                        <p>Bet the pot before your 2 outside cards are placed. In the case of a win, you win the pot. If you are outside of your cards you lose half the pot. If you post you have to pay the full amount of the pot.
+                            </p>
                 </li>
-                <li>"AutoPot" - Any A-2 played as your oustside cards automatically make the player bet the full amount of the pot.</li>
-                <li>
-                        Post Bet - You can bet that your inside card will match one of your outside cards. In the case of this you win the full pot and in addition each player pays an equal percentage to match the pot. Therefore, the player that post would win 2x the pot. If the player bets the post and misses he owes half the amount of the pot to the pot.
+                <li> <h2>AutoPot</h2> 
+                    <p>Any A-2 played as your oustside cards automatically make the player bet the full amount of the pot.</p>
                 </li>
                 <li>
-                        Satan 6s - Any player that gets 6-6-6 as their cards must pay 6x the amount of the pot to the pot.  
+                    <h2>Post Bet</h2>
+                        <p>You can bet that your inside card will match one of your outside cards. In the case of this you win the full pot and in addition each player pays an equal percentage to match the pot. Therefore, the player that post would win 2x the pot. If the player bets the post and misses he owes half the amount of the pot to the pot.
+                            </p>
+                </li>
+                <li>
+                        <h2>Satan 6s</h2>
+                        <p>Any player that gets 6-6-6 as their cards must pay 6x the amount of the pot to the pot.  </p>
                 </li>
             </ul>
             <div style="text-align: center">
                 <img class="centerImage"src="https://cdn0.iconfinder.com/data/icons/mobile-development-svg-icons/60/Coin_columns-512.png" alt="coins">
             </div>
         </div>
+    </section>
+    <section id="GeneralStrategy">
+        <div class="container">
+            <h1>General Strategy</h1>
+            <p>
+                Acey-duecey, though at its first sight looks straight forward, is actually <span class="blue">not</span> as intuitive as many other card game. 
+            </p>
+            <p>For example: You have been dealt with An Ace and an eight. There are 7 card out of 13 cards is fall in betweens these two number</p>
+            <br>
+            <p>Should you <span class="blue">go</span> for it?</p>
+            <p>And if so, how many <span class="blue">bets</span> should you make?</p>
+            <div class="row justify-content-center" style="padding: 1em 1em">
+                    <div class="col text-center" style="padding: 5em">
+                            <img class="img-fluid " src="http://www.freestockphotos.biz/pictures/15/15511/Illustration+of+an+Ace+of+Hearts+playing+card.png" alt="King of Diamond" align="middle">
+                    </div>
+                    <div class="col text-center" style="padding: 5em">
+                            <img class="img-fluid " src="http://www.freestockphotos.biz/pictures/15/15504/Illustration+of+an+Eight+of+Hearts+playing+card.png" alt="King of Diamond" align="middle">
+                    </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2>
+                Answer:
+            </h2>
+            <p>No, you should not even bet anything for it. Here's why.</p>
+            <p>In order to know whether one's would came out winning or losing on any odds. One needs to understand concept of <span class="blue">Expected value (EV)</span>. </p>
+            <h2>
+                Expected Value
+            </h2>
+            <p>
+                By definition, Expected Value is closely defined as such
+            </p>
+            <blockquote class="blockquote">
+                <p>The <span class="blue">amount</span> a player can expect to <span class="blue">win or lose</span> if they were to place a bet on the same odds many times over, 
+                    calculated through a simple equation multiplying your <span class="blue">probability of winning</span> with the amount you could win per bet, 
+                    and subtracting the <span class="blue">probability of losing</span> multiplied by the amount lost per bet.</p>
+            </blockquote>
+            <p>
+                With that, we formulate a way to calculate one's win/lose by this formula.
+            </p>
+            <blockquote class="blockquote">
+                <p>
+                    EV = p(W) - p(L)
+                </p>
+            </blockquote>
+            <p>
+                 where <br>
+                 EV = Expected value, <br>
+                 p(W) = probability of Winning * payout <br>
+                 p(L) = probability of losing * lost bet.
+            </p>
+            <h3>Testing Scenario</h3>
+            <p>Time to use this knowledge to evaluate each scenario. We will be using example previously given, (Low Ace and Eight).
+                <br> and calculate the probability of winning and losing step by step.
+            </p>
+            <!--Winning scenario -->
+            <h4>Winning scenarios: </h4>
+            <p>
+                The expected value of Winning shall be calculate as such:
+            </p>
+            <blockquote class="blockquote">
+                <p>Chances of getting in-between Low Ace and Eight cards: 6 cards (two to seven) out of 13 cards (each suit has the same probability if we only consider the number)</p>
+                <p>Payout rate: 1</p>
+                <p>p(W) = 6/13 * 1</p>
+                <p>p(W) = 6/13</p>
+            </blockquote>
+            <p> We get <span class="blue">6/13</span> as our positive Expected Value (EV) from our probability of winning.</p>
+            <!-- Losing scenarios -->
+            <h4>Losing scenarios: </h4>
+            <p> In losing scenario it shall be a little different. <br> 
+                Since we were expected to pay twice the bet amount when we have the same card as the previous two card display on table, and only the amount we bet when we fall out of the range. <br>
+                We will need to calculate both scenario <span class="blue">saperately</span>.</p>
+            <p> First scenario, fall out of the range:</p>
+            <p>
+                The expected value of <span class="blue">Losing</span> when fall out of range shall be calculate as such:
+            </p>
+            <blockquote class="blockquote">
+                    <p>Chances of getting out of range Ace and Eight cards: <br> 5 cards (nine to King cards) out of 13 cards (each suit has the same probability if we only consider the number)</p>
+                    <p>Paying rate: 1</p>
+                    <p>p(L) = 5/13 * 1</p>
+                    <p>p(L) = 5/13</p>
+            </blockquote>
+            <p> We get <span class="blue">5/13</span> as our negetive Expected Value (EV) from our probability of losing.</p>
+            <p>Second scenario, The expected <span class="blue">losing</span> value when player card land on either Ace or eight.</p>
+            <blockquote class="blockquote">
+                    <p>Chances of getting Ace or Eight cards: <br> 2 cards (nine to King cards) out of 13 cards (each suit has the same probability if we only consider the number, to simplified things.)</p>
+                    <p>Paying rate: 2</p>
+                    <p>p(L) = 2/13 * 2</p>
+                    <p>p(L) = 4/13</p>
+            </blockquote>
+            <p> We get <span class="blue">4/13</span> as our negetive Expected Value (EV) from our probability of losing when player card land on either Ace or eight.</p>
+            <h4>
+                Conclusion
+            </h4>
+            <p>
+                All the scenario have been considered, now we just add up all the positive and negetive scenario and we get:
+            </p>
+            <blockquote class="blockquote">
+                    <p>Expected Value: </p>
+                    <p>EV of Win: 6/13</p>
+                    <p>EV of Lose: 5/13 + 4/13 = 9/13</p>       
+                    <p>Total EV = 6/13 - 9/13) = - 3/13</p>             
+            </blockquote>
+            <p>We actally get -3/13 EV when bet on scenario Low Ace to Eight. A bad move. A negetive EV means that you will lost your bet more in the long run rather than winning.</p>
+        </div>
+    </section>
+    <section id="BasicCalculator">
+        <div class="container">
+            <h1>Basic Calculator</h1>
+        </div>
+    </section>
+    <section id="More Calculator">
+        
     </section>
 </main>
 </body>
