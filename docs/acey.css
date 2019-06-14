@@ -21,19 +21,25 @@ section{
 }
 
 section div{
-    padding-top: 5em;
+    padding-top: 3em;
 }
 
 section:nth-child(odd){
-    background-color:lightgreen;    
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 section:nth-child(even){
-    background-color:lightpink;
+    background: #E0EAFC;  /* fallback for old browsers */
+      /*background: -webkit-linear-gradient(to bottom, #CFDEF3, #E0EAFC);*/ /*Chrome 10-25, Safari 5.1-6 */
+      /*background: linear-gradient(to bottom, #CFDEF3, #E0EAFC); */ /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
 }
 
 section:nth-child(3n){
-    background-color: lightsalmon;
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 span{
@@ -56,3 +62,10 @@ blockquote
     background-color: rgba(211, 211, 211, 0.418);
 }
 
+.home-img-poker
+{
+    float:right;
+    width: 100%;
+    max-height: 400px;
+    width: auto;
+}

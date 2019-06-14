@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="Acey Deucey Guide, Strategy, calculation and explanation. Best way to play Acey Deucey. Also known as In-Between, Sheets or Maverick. Card game between friends.">
     <meta name="author" content="">
-    <title>Prototype for Acey Duecey</title>
+    <title>Acey Duecey Optimal Guide Strategies and calculator.</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
-    <link rel="stylesheet" href="..//docs//acey.css">
+    <link rel="stylesheet" href="acey.css">
 </head>
 <body>
 <header style="background-color: lightblue;">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:transparent;color:black;">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="color:black;">
         <ul class="navbar-nav mr-auto" style="font-weight:bold;color:black">
                 <li class="nav-item" >
                     <a class="nav-link" href="#Home" style="color:black">Home</a>
@@ -25,14 +25,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#Variations" style="color:black">Variations</a>
                 </li>    
-                <li class="nav-item dropdown" style="background-color: transparent">
-                    <a class="nav-link dropdown-toggle" style="color:rgb(4, 0, 255)" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Strategy</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01" style="background-color: transparent">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color:rgb(4, 0, 255)" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Strategy</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
                     <a class="dropdown-item" href="#GeneralStrategy">General Strategy</a>
                     <a class="dropdown-item" href="#BasicCalculator">Basic Calculator</a>
                     <a class="dropdown-item" href="#">Solo</a>
                     <a class="dropdown-item" href="#">Two players</a>
                     <a class="dropdown-item" href="#">Group players</a>
+                    <a class="dropdown-item" href="#">Risk of Ruin</a>
                     </div>
                 </li>
         </ul>   
@@ -41,21 +42,17 @@
 </header>
 <main role="main" >
     <section id="Home"> 
-        <div class="container" style="padding-top:10em;">
+        <div class="container">
             <h1><strong>Acey-deucey</strong></h1>
             <p class="lead">also known as In-Between, Sheets or Maverick</p>
             <p style="font-style:italic"> A simple card game that involves betting between the cards.</p>
-            <div>
-                <img class="img-fluid" style="float:right"
-                src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Fgambling-4%2F128%2FGambling_playing_cards-512.png&f=1" alt="Poker cards">
-                <div style="clear:both"></div>
-            </div>
-            
+            <img class="img-fluid home-img-poker"
+                src="https://www.snipstock.com/assets/cdn/png/22089311b6f54551c3707be7b4b915eb.png" alt="Poker cards 4 As and poker chips">
+            <div style="clear:both"></div>
         </div>
-        <div style="clear:both"></div>
     </section>
     <section id="Introduction"> 
-            <div  class="container" style="padding-top:5em;">
+            <div  class="container">
                 <div class="row">
                     <div class="col">
                     <h1><strong>Introduction</strong></h1>
@@ -211,9 +208,11 @@
                     <p>p(L) = 4/13</p>
             </blockquote>
             <p> We get <span class="blue">4/13</span> as our negetive Expected Value (EV) from our probability of losing when player card land on either Ace or eight.</p>
-            <h4>
+            <hr></hr>
+            <!-- Conclusions -->
+            <h3>
                 Conclusion
-            </h4>
+            </h3>
             <p>
                 All the scenario have been considered, now we just add up all the positive and negetive scenario and we get:
             </p>
