@@ -11,6 +11,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
     <link rel="stylesheet" href="acey.css">
+    <!-- Calculator Script-->
+    <script src="JS/AceyDeuceyCalculator.js"></script>
+    <script src="JS/AceyDeuceyCalculatorView.js"></script>
 </head>
 <body>
 <header style="background-color: lightblue;">
@@ -227,11 +230,36 @@
     </section>
     <section id="BasicCalculator">
         <div class="container">
-            <h1>Basic Calculator</h1>
+            <h2>Basic Calculator</h2>
+            <p>
+                Insert first and second card number to calculate Estimate outcome value. (EV) and probabilities of winning.
+            </p>
+            <p>
+                Estimated Value show much you would win if you bet $1 in current scenario for a very long series.
+            </p>
+            <p>
+                Probabilities of winning show the winning chances of current scenario. 
+            </p>
+            <h3>Assumption</h3> 
+            <p>
+                This calculator assume that <span>J = 11, Q = 12, K = 13.</span> 
+            </p>
+            <p>
+                Therefore, Valid value consist of  <span>1 to 13</span>
+            </p>
+            <div>
+                <p>First Card Number: <input type="text" id="Calculator-FirstValue" placeholder="Insert First card Number" value="13"/></p>
+                <p>Second Card Number: <input type="text" id="Calculator-SecondValue" placeholder="Insert Second card Number" value="1"/></p>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary btn-lg"  onclick="CalculateEVAndProbabilities();">Calculate!</button>
+            </div>
+            <div>
+                <p>Estimate outcome value: <span id="EV-Outcome"></span></p>
+                <p>Probabilities of winning: <span id="WinningProbabilities"></span></p>
+                <p id="Calculator-ErrorDescription"></p>
+            </div>
         </div>
-    </section>
-    <section id="More Calculator">
-        
     </section>
 </main>
 </body>

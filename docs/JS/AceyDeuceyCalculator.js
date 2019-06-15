@@ -8,6 +8,7 @@ class AceyDeuceyCalculator{
      Do not consider card when they are same value.
      FirstCardNumber should always be lower than secondCardNumber
      @Throw Error() CardNumber value not in range
+     @return Number
     */
     CalculateEstimateValue(firstCardNumber, secondCardNumber){
 
@@ -21,26 +22,34 @@ class AceyDeuceyCalculator{
             firstCardNumber = result.firstNumber;
             secondCardNumber = result.secondNumber;
         }
+
+        if(this._IsSameNumber(firstCardNumber,secondCardNumber))
+        {
+            //TODO: caculate the best case scenario.
+        }
+        else
+        {
         
-        let winningSpread = secondCardNumber  - firstCardNumber  -1;
-        let winEV = winningSpread / 13;
-        
-        //calculate Any card fall out of first card (lower than first card)
-        let zeroToFirstCard = firstCardNumber - 1;
-        //calculate Any card fall out of second card (higher than second card)
-        let secondToLastCard = 13 - secondCardNumber;
-        //combine into the number of losing spread cards
-        let losingSpreadNegativePayoutSingle = zeroToFirstCard + secondToLastCard;
+            let winningSpread = secondCardNumber  - firstCardNumber  -1;
+            let winEV = winningSpread / 13;
+            
+            //calculate Any card fall out of first card (lower than first card)
+            let zeroToFirstCard = firstCardNumber - 1;
+            //calculate Any card fall out of second card (higher than second card)
+            let secondToLastCard = 13 - secondCardNumber;
+            //combine into the number of losing spread cards
+            let losingSpreadNegativePayoutSingle = zeroToFirstCard + secondToLastCard;
 
-        //this is the probabilities of losing and pay to pot by the bet * 1.
-        let losingProbabilitiesPayoutDouble = 2;
-        let losingPayoutDoubleEV = losingProbabilitiesPayoutDouble * 2;
+            //this is the probabilities of losing and pay to pot by the bet * 1.
+            let losingProbabilitiesPayoutDouble = 2;
+            let losingPayoutDoubleEV = losingProbabilitiesPayoutDouble * 2;
 
-        let lostEV = (losingSpreadNegativePayoutSingle + losingPayoutDoubleEV) /13 
+            let lostEV = (losingSpreadNegativePayoutSingle + losingPayoutDoubleEV) /13 
 
-        let totalEV = winEV - lostEV;
+            let totalEV = winEV - lostEV;
 
-        return totalEV;
+            return totalEV;
+        }
     }
 
     CalculateProbabilityPercentToWin(firstCardNumber, secondCardNumber)
@@ -55,7 +64,7 @@ class AceyDeuceyCalculator{
             firstCardNumber = result.firstNumber;
             secondCardNumber = result.secondNumber;
         }
-        
+
         let winningSpread = secondCardNumber  - firstCardNumber  -1;
         let winProbability = winningSpread / 13;
         let winProbabilityInPercent = winProbability * 100;
