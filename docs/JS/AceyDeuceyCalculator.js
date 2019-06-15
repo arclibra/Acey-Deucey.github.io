@@ -14,6 +14,13 @@ class AceyDeuceyCalculator{
         if(!(this.CheckCardInRange(firstCardNumber) && this.CheckCardInRange(secondCardNumber))){
             throw new Error("CardNumber value not in range");
         }
+
+        if(firstCardNumber > secondCardNumber){
+            let result = {};
+            result = this._SwapNumber(firstCardNumber,secondCardNumber, result)
+            firstCardNumber = result.firstNumber;
+            secondCardNumber = result.secondNumber;
+        }
         
         let winningSpread = secondCardNumber  - firstCardNumber  -1;
         let winEV = winningSpread / 13;
@@ -42,6 +49,13 @@ class AceyDeuceyCalculator{
             throw new Error("CardNumber value not in range");
         }
 
+        if(firstCardNumber > secondCardNumber){
+            let result = {};
+            result = this._SwapNumber(firstCardNumber,secondCardNumber, result)
+            firstCardNumber = result.firstNumber;
+            secondCardNumber = result.secondNumber;
+        }
+        
         let winningSpread = secondCardNumber  - firstCardNumber  -1;
         let winProbability = winningSpread / 13;
         let winProbabilityInPercent = winProbability * 100;
@@ -51,5 +65,23 @@ class AceyDeuceyCalculator{
 
     CheckCardInRange(cardNumberParam){
         return (cardNumberParam < 14 && cardNumberParam > 0);
+    }
+
+    _IsSameNumber(firstNumber,secondNumber)
+    {
+        return firstNumber == secondNumber;
+    }
+    /**
+     * @param  {} firstNumber
+     * @param  {} SecondNumber
+     * @param  {} result; result.firstNumber, result.secondNumber are the reverse value.
+     * @returns {} result
+     */
+    _SwapNumber(firstNumber, secondNumber, result)
+    {
+        result.firstNumber = secondNumber;
+        result.secondNumber = firstNumber;
+
+        return result;
     }
 }
