@@ -27,14 +27,15 @@ function CalculateEVAndProbabilities(){
 
             return;
         }
-        
+
         CalculatorErrorDescription_html.innerHTML = "";
     }
     else
     {
-        EV_html.innerHTML = evResult;
-        winning_html.innerHTML = probabilitiesResult + '%';
         CalculatorErrorDescription_html.innerHTML = "Value enter is not number."
     }
+
+    EV_html.innerHTML = evResult;
+    winning_html.innerHTML = probabilitiesResult + '%';
 }
 
