@@ -3,7 +3,13 @@ Acey-Deucey, Introduction and optimal strategy
 
 ## Basic strategy
 
-Players attempting to middle two posts with a spread of less than 8 will show a long term loss. (Where n {\displaystyle n} n is the spread between the posts (i.e., the value of the higher card minus the value of the lower card), 4 ( n − 1 ) = 4 ( 11 − ( n − 1 ) ) + 2 × 2 × 3 {\displaystyle 4(n-1)=4(11-(n-1))+2\times 2\times 3} {\displaystyle 4(n-1)=4(11-(n-1))+2\times 2\times 3} solves to a break-even point of 8.0.) 
+Players attempting to middle two posts with a spread of less than 8 will show a long term loss. 
+
+  Where n , n is the spread between the posts
+  
+  i.e., the value of the higher card minus the value of the lower card), 
+  4 ( n − 1 ) = 4 ( 11 − ( n − 1 ) ) + 2 × 2 × 3 
+  solves to a break-even point of 8.0.) 
 
 Or using EV (Estimate outcome Value) calculation
 
